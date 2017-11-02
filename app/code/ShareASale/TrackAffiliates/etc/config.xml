@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <!-- we are setting the default value -->
+    <default>
+        <!-- this is the section short name -->
+        <shareasale_trackaffiliates>
+            <!-- this is the group short name -->
+            <cookie>
+                <!-- this is the field short name -->
+                <timeout>30</timeout>
+            </cookie>
+            <!-- this is the group short name -->
+            <merchant>
+                <!-- this is the field short name -->
+                <id>00000</id>
+            </merchant>            
+        </shareasale_trackaffiliates>
+    </default> 
+    
+	      
+    <modules>
+        <ShareASale_TrackAffiliates>
+            <version>1.0.1</version>
+        </ShareASale_TrackAffiliates>
+    </modules>
+    <global>
+        <blocks>
+            <shareasale_trackaffiliates>
+                <class>ShareASale_TrackAffiliates_Block_Onepage_Success</class>
+            </shareasale_trackaffiliates>
+        </blocks>       
+        <models>
+            <shareasale_trackaffiliates>
+                <class>ShareASale_TrackAffiliates_Model_Orders</class>
+            </shareasale_trackaffiliates>
+        </models>
+
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <shareasale_trackaffiliates module="ShareASale_TrackAffiliates">
+                    <file>checkout_onepage_success.xml</file>
+                </shareasale_trackaffiliates>
+            </updates>
+        </layout>      
+    </frontend>
+    
+   
+</config>

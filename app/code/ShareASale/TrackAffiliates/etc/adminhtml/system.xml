@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="ShareASale" translate="label" sortOrder="10">
+      <label>Share A Sale</label>
+    </tab>
+    <section id="shareASale_trackAffiliates" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+      <label>General</label>
+        <tab>ShareASale</tab>
+      <resource>ShareASale_TrackAffiliates::affiliate</resource> 
+      <group id="general" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>General Settings</label>
+          <field id="status" translate="label comment" type="select" sortOrder="10"  showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Enabled</label>
+              <comment>Enabled Affiliate Tracking</comment>
+              <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+          </field>
+          <field id="merchant_id" translate="label comment" type="text" sortOrder="20"  showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Merchant ID: </label>
+            <comment>Merchant ID</comment>
+          </field>            
+      </group>
+      <group id="cookie" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Cookie Settings</label>
+          <field id="merchant_id" translate="label comment" type="text" sortOrder="20"  showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Timeout: </label>
+            <comment>This is the amount of time an affiliate cookie will last, in days</comment>
+          </field>
+      </group>
+    </section>      
+  </system>
+</config>

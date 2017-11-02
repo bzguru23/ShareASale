@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="ShareASale" title="Share A Sale" module="ShareASale_TrackAffiliates" sortOrder="20" resource="ShareASale_TrackAffiliates::affiliate"/>
+
+        <add id="ShareASale_TrackAffiliates::affiliate" title="Manage Affiliate Accounts" module="ShareASale_TrackAffiliates" sortOrder="10" action="affiliate/affiliate/index" parent="ShareASale" resource="ShareASale_TrackAffiliates::manage_affiliate"/>        
+             
+        <add id="ShareASale_TrackAffiliates::affiliate_config" title="Configuration" module="ShareASale_TrackAffiliates" sortOrder="10" action="adminhtml/system_config/edit/section/shareASale_trackAffiliates" parent="ShareASale" resource="ShareASale_TrackAffiliates::affiliate"/>
+    </menu>
+    
+</config>
